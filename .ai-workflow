@@ -1,0 +1,20 @@
+# Model Configuration per task
+export CODE_GEN_MODEL="qwen2.5-coder:32b"
+export CODE_AUDIT_MODEL="deepseek-r1:14b"
+export DOC_MODEL="minimax-m2.5:cloud"
+export TEST_MODEL="codestral:22b"
+export VISION_MODEL="qwen3-vl:32b"
+
+# Project paths
+export LARAVEL_PATH="$PWD/dondza"
+export NEXTJS_PATH="$PWD/dondza_cadastro"
+export FLUTTER_PATH="$PWD/Uno"
+
+# MCP Server ports
+export LARAVEL_MCP_PORT=8001
+export NEXTJS_MCP_PORT=3001
+export FLUTTER_MCP_PORT=8081
+
+# Test configuration
+export TEST_REPORT_DIR="$PWD/test_reports"
+export COVERAGE_DIR="$PWD/coverage_reports"
