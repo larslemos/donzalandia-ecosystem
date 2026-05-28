@@ -1,122 +1,4 @@
-# Chat Conversation
 
-Note: _This is purely the output of the chat conversation and does not contain any raw data, codebase snippets, etc. used to generate the output._
-
-### User Input
-
-You are an expert Solutions Architect and Senior Flutter/Dart Developer. Your task is to analyze the codebase/repository details of a Flutter project and generate a comprehensive, production-grade documentation suite. for the Uno folder codebase
-
-The documentation must be modular, highly structured, and written in clean Markdown. You will output a primary index file (`README.md` or `INDEX.md`), followed by the specific contents of individual markdown files that belong in a separate `/docs` folder.
-
-### Core Architecture & Stack to Assume (If not explicitly modified):
-- Language: Dart 3.x
-- Framework: Flutter 3.x
-- State Management: [Specify e.g., Riverpod / Bloc / Provider]
-- Architecture: Feature-first or Layered (Presentation, Domain, Data)
-- Key Packages: Dio, Freezed, GoRouter, Kiwi/GetIt
-
----
-
-### Output Instructions
-
-Generate the documentation using the exact structure below. Separate each file using a clear file header block: `` so the contents can be easily split into separate files later.
-
-#### 1. INDEX / README.md
-Generate a main reference index matching this layout:
-- Header with Project Name, Organization, Date, and Target Platforms (iOS, Android, Web).
-- A Markdown table tracking the Index (`01` to `08`) linked to relative paths (e.g., `./docs/01-setup.md`).
-- A "Quick Reference" section containing Production/Staging API URLs, Local run commands (`flutter pub run...`), and an "Urgent Security Actions" callout if any leaks/bad practices are detected.
-- An ASCII/Text-based "Architecture at a Glance" diagram mapping the Flutter application layers to the Backend/External APIs.
-
-#### 2. INDIVIDUAL FILES (To be placed in a separate folder)
-Provide the full markdown content for the following files, matching the layout established in the Index:
-
-- ``: Prerequisites (Flutter/Dart versions), FVM setup (if applicable), cocoapods, env initialization (`.env` or `--dart-define`), local running, and common build troubleshooting.
-- ``: Directory structure (`lib/src/...`), State management flow diagram, Dependency Injection setup, and architectural patterns used.
-- ``: Network layer implementation (Dio/Http), Interceptors (Auth/Logger), Token refresh logic, and error handling formatting.
-- ``: Local storage overview (Isar, Hive, or Secure Storage), schemas, and encryption details if applicable.
-- ``: Core features breakdown, navigation matrix (GoRouter/AutoRoute paths), and Role-Based Access Control (RBAC) handling on UI elements.
-- ``: Deep dive into how SSL Pinning, Jailbreak/Root detection, local data encryption, and obfuscation (`--obfuscate`) are handled.
-- ``: CI/CD Pipeline details (GitHub Actions / Codemagic / Fastlane), App Store & Google Play deployment workflows.
-- ``: Unit testing, Widget testing, Integration testing strategies, Golden tests configurations, and coverage commands.
-
----
-
-### Execution Rules:
-1. **Style**: Professional, strictly technical, concise, avoiding generic boilerplate filler text. Use clean markdown formatting, tables, blockquotes (`>`), and code snippets.
-2. **Context**: Base your response entirely on the code files, file structure, and technical requirements provided below. @[Uno] 
-
-*Listed directory [Uno](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno) *
-
-*Viewed [pubspec.yaml](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/pubspec.yaml) *
-
-*Listed directory [lib](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib) *
-
-*Listed directory [core](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/core) *
-
-*Listed directory [api](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/core/api) *
-
-*Viewed [api_service.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/core/api/api_service.dart) *
-
-*Viewed [auth_manager.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/core/api/auth_manager.dart) *
-
-*Viewed [env_config.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/core/api/env_config.dart) *
-
-*Viewed [main.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/main.dart) *
-
-*Listed directory [services](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/services) *
-
-*Listed directory [screens](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/screens) *
-
-*Listed directory [triagem](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/screens/triagem) *
-
-*Listed directory [auth](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/screens/auth) *
-
-*Listed directory [home](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/screens/home) *
-
-*Viewed [chat_service.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/services/chat_service.dart) *
-
-*Viewed [firebase.json](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/firebase.json) *
-
-*Viewed [message_notification_service.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/services/message_notification_service.dart) *
-
-*Viewed [deep_link_service.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/services/deep_link_service.dart) *
-
-*Viewed [triagem_service.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/services/triagem_service.dart) *
-
-*Viewed [triagem_api_service.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/core/api/triagem_api_service.dart) *
-
-*Viewed [debug_screen.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/debug_screen.dart) *
-
-*Grep searched codebase*
-
-*Viewed [api_service.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/core/api/api_service.dart) *
-
-*Listed directory [models](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/models) *
-
-*Listed directory [initial](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/initial) *
-
-*Grep searched codebase*
-
-*Listed directory [Donzalandia](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia) *
-
-*Listed directory [documentation](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation) *
-
-*Viewed [README.md](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/README.md) *
-
-*Viewed [README.md](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/README.md) *
-
-*Viewed [triagem_models.dart](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/lib/models/triagem_models.dart) *
-
-*Listed directory [test](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno/test) *
-
-### Planner Response
-
-### PLASIR Mobile (Uno) Documentation Suite
-
-Below is the complete, production-grade documentation suite for the Flutter-based **PLASIR Mobile client (`Uno`)**. The documentation is modular, highly technical, and completely aligned with the actual implementation found in the codebase.
-
----
 
 [FILE: README.md]
 <!-- FILE: README.md -->
@@ -133,14 +15,14 @@ Below is the complete, production-grade documentation suite for the Flutter-base
 
 | File | Relative Path | Description |
 | :--- | :--- | :--- |
-| **01** | [`./docs/01-setup.md`](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/docs/01-setup.md) | Development environment, Flutter SDK prerequisites, FVM, `.env` config, and build troubleshooting. |
-| **02** | [`./docs/02-architecture.md`](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/docs/02-architecture.md) | Directory structure, Architectural Layers, State Management Singleton pattern, and Dependency Flow. |
-| **03** | [`./docs/03-api.md`](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/docs/03-api.md) | Networking layer using native `http`, header handling, deep link token verification, and error handling. |
-| **04** | [`./docs/04-database.md`](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/docs/04-database.md) | Secure storage mechanisms (`FlutterSecureStorage`), in-memory JSON question loading, and Firestore. |
-| **05** | [`./docs/05-features.md`](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/docs/05-features.md) | Core features: WGSS Screening (8-section logic with custom Skip rules) and Real-time Messaging system. |
-| **06** | [`./docs/06-security.md`](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/docs/06-security.md) | Obfuscation, local storage encryption, and vulnerabilities (SSL Pinning & Firebase Auth gap analysis). |
-| **07** | [`./docs/07-deployment.md`](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/docs/07-deployment.md) | Android/iOS compilation pipelines, manual Fastlane deployment workflows, and Play Store/App Store checklists. |
-| **08** | [`./docs/08-testing.md`](file:///Users/larslemos/Documents/Github/Antigravity/Donzalandia/documentation/docs/08-testing.md) | Automated testing strategy: Mocking Http and Firestore, Widget and Golden testing setups, and coverage. |
+| **01** | [`./docs/01-setup.md`] | Development environment, Flutter SDK prerequisites, FVM, `.env` config, and build troubleshooting. |
+| **02** | [`./docs/02-architecture.md`] | Directory structure, Architectural Layers, State Management Singleton pattern, and Dependency Flow. |
+| **03** | [`./docs/03-api.md`] | Networking layer using native `http`, header handling, deep link token verification, and error handling. |
+| **04** | [`./docs/04-database.md`] | Secure storage mechanisms (`FlutterSecureStorage`), in-memory JSON question loading, and Firestore. |
+| **05** | [`./docs/05-features.md`] | Core features: WGSS Screening (8-section logic with custom Skip rules) and Real-time Messaging system. |
+| **06** | [`./docs/06-security.md`] | Obfuscation, local storage encryption, and vulnerabilities (SSL Pinning & Firebase Auth gap analysis). |
+| **07** | [`./docs/07-deployment.md`] | Android/iOS compilation pipelines, manual Fastlane deployment workflows, and Play Store/App Store checklists. |
+| **08** | [`./docs/08-testing.md`] | Automated testing strategy: Mocking Http and Firestore, Widget and Golden testing setups, and coverage. |
 
 ---
 
@@ -830,7 +712,7 @@ flutter clean
 
 # 2. Get clean dependencies
 flutter pub get
-
+CLE
 # 3. Compile Android (Generate AAB bundle for Google Play Console)
 flutter build appbundle --release --obfuscate --split-debug-info=build/app/outputs/symbols --dart-define-from-file=.env
 
@@ -1031,7 +913,7 @@ open coverage/html/index.html
 ---
 ### Work Summary
 
-* **Codebase Analysis Complete**: Thoroughly explored the `/Users/larslemos/Documents/Github/Antigravity/Donzalandia/Uno` project, mapping the folder structures, local package configurations (`pubspec.yaml`), custom network architecture (`api_service.dart`, `env_config.dart`, `auth_manager.dart`), and domain architectures (`triagem_service.dart`, `chat_service.dart`, `triagem_models.dart`).
+* **Codebase Analysis Complete**: Thoroughly explored folder structures, local package configurations (`pubspec.yaml`), custom network architecture (`api_service.dart`, `env_config.dart`, `auth_manager.dart`), and domain architectures (`triagem_service.dart`, `chat_service.dart`, `triagem_models.dart`).
 * **Technical Specificity Ensured**: Excluded the generic templates suggested by the prompt (such as `Dio` or generic `Bloc` patterns) in favor of the actual, exact patterns discovered on-disk, which rely on native Dart `http`, standard Firebase Firestore connections, and Vanilla State structures (e.g. singletons combined with local notifications).
 * **Identified Vulnerabilities & Gaps**: Outlined crucial recommendations in `06-security.md` pointing out severe architectural vulnerabilities—such as the plaintext test user credentials inside `lib/debug_screen.dart`, absolute lack of SSL Pinning, lack of local device integrity, and potential open database access vectors inside Cloud Firestore due to the absence of standard authentication accounts.
 * **Modular Generation Completed**: Provided the complete set of separate, production-grade files (`README.md` and `docs/01` through `08`), utilizing exact file tags so they can be easily parsed.
